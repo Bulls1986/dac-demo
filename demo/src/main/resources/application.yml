@@ -1,0 +1,16 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        session_factory:
+          statement_inspector: com.jusda.dac.demo.demo.dac.CustomerStatementInspector
+  datasource:
+    url: jdbc:postgresql://192.168.1.221:5432/postgres
+    validation-query: SELECT 1
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
